@@ -1,0 +1,9 @@
++=org.fit_labs.labs2.Instructions.Addition
+*=org.fit_labs.labs2.Instructions.Multiplication
+-=org.fit_labs.labs2.Instructions.Subtraction
+/=org.fit_labs.labs2.Instructions.Division
+DEFINE=org.fit_labs.labs2.Instructions.Define
+PUSH=org.fit_labs.labs2.Instructions.Push
+POP=org.fit_labs.labs2.Instructions.Pop
+PRINT=org.fit_labs.labs2.Instructions.Print
+SQRT=org.fit_labs.labs2.Instructions.Sqrt

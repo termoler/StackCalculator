@@ -1,0 +1,7 @@
+define a 4
+push a
+sqrt
+define a 5
+push a
+-
+print

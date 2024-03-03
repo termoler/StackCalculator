@@ -1,0 +1,9 @@
+define a 23
+push a
+define b 5
+push b
+/
+sqrt
+define qwerty 56
+*
+print
