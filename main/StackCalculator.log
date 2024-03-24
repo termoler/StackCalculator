@@ -1,0 +1,84 @@
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.Main main
+INFO: Create calculator
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: Request for a list of commands and their arguments.
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.GetInstruction.GetInstructions of
+INFO: Selecting the mode for getting a list of commands and their arguments.
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.GetInstruction.InstructionsFromFile getInstruction
+INFO: Start the mode of receiving commands from the configuration file.
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.GetInstruction.InstructionsFromFile getInstruction
+INFO: The commands were successfully received from the configuration file.
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: Instructions have been received.
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: The beginning of the calculation:
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: Performing a DEFINE
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: The DEFINE was executed successfully
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: Performing a PUSH
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: The PUSH was executed successfully
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: Performing a DEFINE
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: The DEFINE was executed successfully
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: Performing a PUSH
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: The PUSH was executed successfully
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: Performing a /
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: The / was executed successfully
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: Performing a SQRT
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: The SQRT was executed successfully
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: Performing a DEFINE
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: The DEFINE was executed successfully
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: Performing a PUSH
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: The PUSH was executed successfully
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: Performing a *
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: The * was executed successfully
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: Performing a PRINT
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: The PRINT was executed successfully
+
+мар. 07, 2024 7:28:21 AM org.fit_labs.labs2.StackCalculator.StackCalculator completeCalculate
+INFO: The calculation was completed successfully.
+
