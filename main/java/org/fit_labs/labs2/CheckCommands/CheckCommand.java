@@ -1,13 +1,13 @@
 package org.fit_labs.labs2.CheckCommands;
 
-import org.fit_labs.labs2.Instructions.Commands;
+import org.fit_labs.labs2.Instructions.Command;
 import java.io.IOException;
-import org.fit_labs.labs2.Factory.FactoryCommands;
+import org.fit_labs.labs2.Factory.Factory;
 
 public class CheckCommand {
-    private final FactoryCommands<Commands> factory;
-    public CheckCommand(String commandsFilename) throws IOException {
-        factory = new FactoryCommands<>(commandsFilename);
+    private final Factory<Command> factory;
+    public CheckCommand() throws IOException {
+        factory = new Factory<>();
     }
     private boolean isSharp(char symbol){
         return symbol == '#';

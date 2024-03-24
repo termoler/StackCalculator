@@ -4,7 +4,7 @@ import org.fit_labs.labs2.ExecutionContext.ExecutionContext;
 
 import java.util.List;
 
-public class Subtraction implements Commands {
+public class Subtraction implements Command {
     @Override
     public void run(ExecutionContext context, List<String> args) {
         context.pushStackValue(context.popStackValue() - context.popStackValue());

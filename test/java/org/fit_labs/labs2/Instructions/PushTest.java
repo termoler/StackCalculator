@@ -13,7 +13,7 @@ class PushTest {
 
     @org.junit.jupiter.api.Test
     void correctEquals() {
-        context.addVariable("a", 5);
+        context.addVariable("a", "5");
 
         args.add("a");
         String nameValue = args.getFirst();
@@ -25,7 +25,7 @@ class PushTest {
 
     @org.junit.jupiter.api.Test
     void incorrectEquals(){
-        context.addVariable("a", 5);
+        context.addVariable("a", "5");
 
         args.add("a");
         String nameValue = args.getFirst();

@@ -9,14 +9,14 @@ class SqrtTest {
 
     @org.junit.jupiter.api.Test
     void correctEquals() {
-        context.pushStackValue(4);
+        context.pushStackValue(4.0);
         double x = Math.sqrt(context.popStackValue());
         assertEquals(2, x);
     }
 
     @org.junit.jupiter.api.Test
     void incorrectEquals(){
-        context.pushStackValue(4);
+        context.pushStackValue(4.0);
         double x = Math.sqrt(context.popStackValue());
         assertNotEquals(3, x);
     }

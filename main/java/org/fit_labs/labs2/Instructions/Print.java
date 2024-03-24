@@ -4,7 +4,7 @@ import org.fit_labs.labs2.ExecutionContext.ExecutionContext;
 
 import java.util.List;
 
-public class Print implements Commands {
+public class Print implements Command {
     @Override
     public void run(ExecutionContext context, List<String> args) {
         context.printValue(context.getTopStack().toString());

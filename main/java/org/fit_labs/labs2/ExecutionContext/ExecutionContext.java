@@ -14,18 +14,13 @@ public class ExecutionContext {
     private final Map<String, Double> variables = new HashMap<>();
     private final CorrectValueUtil correctValueUtil = new CorrectValueUtil();
     private final PrintStream streamOut;
-
-    public ExecutionContext(OutputStream stream){
-        streamOut = new PrintStream(stream);
-    }
-
+    public ExecutionContext(OutputStream stream){streamOut = new PrintStream(stream);}
     public ExecutionContext(){
         streamOut = System.out;
     }
-
-    public void pushStackValue(Object value) {
+    public void pushStackValue(Double value) {
         try {
-            stack.push(Double.parseDouble(value.toString()));
+            stack.push(value);
         } catch (NumberFormatException ex) {
             throw new ExecutionContextException("Value is incorrect", ex);
         }
@@ -41,24 +36,22 @@ public class ExecutionContext {
         }
     }
 
-    public void addVariable(Object name, Object value) {
-        String nameData;
+    public void addVariable(String name, String value) {
         double val;
         try {
-            nameData = name.toString();
-            val = Double.parseDouble(value.toString());
+            val = Double.parseDouble(value);
         } catch (NumberFormatException ex) {
-            throw new ExecutionContextException("Value is incorrect: " + value.toString() + ". It isn't number");
+            throw new ExecutionContextException("Value is incorrect: " + value + ". It isn't number");
         }
 
-        if (!correctValueUtil.isAlphaWord(name.toString())) {
+        if (!correctValueUtil.isAlphaWord(name)) {
             throw new ExecutionContextException("Invalid variable name. The variable name must consist of letters.");
         }
 
-        if (!correctValueUtil.isDigitWord(value.toString())) {
+        if (!correctValueUtil.isDigitWord(value)) {
             throw new ExecutionContextException("Invalid numerical value for the variable.");
         }
-        variables.put(nameData, val);
+        variables.put(name, val);
     }
 
     public Double getValue(String key) {
@@ -89,7 +82,6 @@ public class ExecutionContext {
                     "value and the value, and then do a PUSH of the name of the value");
         }
         streamOut.println(str);
-//        System.out.println(str);
     }
 }
       

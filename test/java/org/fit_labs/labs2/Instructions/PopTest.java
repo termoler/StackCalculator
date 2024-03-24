@@ -9,13 +9,13 @@ class PopTest {
 
     @org.junit.jupiter.api.Test
     void correctEquals() {
-        context.pushStackValue(1);
+        context.pushStackValue(1.0);
         assertEquals(1, context.popStackValue());
     }
 
     @org.junit.jupiter.api.Test
     void incorrectEquals() {
-        context.pushStackValue(5);
+        context.pushStackValue(5.0);
         assertNotEquals(1, context.popStackValue(), 0.0);
     }
 }

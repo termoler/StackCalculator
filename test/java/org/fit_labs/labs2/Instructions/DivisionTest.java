@@ -15,8 +15,8 @@ class DivisionTest {
 
     @org.junit.jupiter.api.Test
     void correctEquals() {
-        context.pushStackValue(2);
-        context.pushStackValue(4);
+        context.pushStackValue(2.0);
+        context.pushStackValue(4.0);
 
         double x = context.popStackValue();
         double y = context.popStackValue();
@@ -25,16 +25,16 @@ class DivisionTest {
 
     @org.junit.jupiter.api.Test
     void incorrectEquals(){
-        context.pushStackValue(15);
-        context.pushStackValue(3);
+        context.pushStackValue(15.0);
+        context.pushStackValue(3.0);
         double x = context.popStackValue() / context.popStackValue();
         assertNotEquals(2, x, 0.0);
     }
 
     @org.junit.jupiter.api.Test
     void divZero(){
-        context.pushStackValue(5);
-        context.pushStackValue(0);
+        context.pushStackValue(5.0);
+        context.pushStackValue(0.0);
         Assertions.assertThrows(ExecutionContextException.class, () -> {
             div.run(context, args);
         });

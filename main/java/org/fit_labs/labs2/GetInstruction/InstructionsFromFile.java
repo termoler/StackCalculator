@@ -9,22 +9,24 @@ import java.io.*;
 import java.util.*;
 import java.util.logging.Logger;
 
-public class InstructionsFromFile extends GetInstructions {
+public class InstructionsFromFile {
     private String[] getLines(String configFilename) throws IOException {
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
         BufferedReader reader;
-        InputStream is;
-        try {
-            is = classloader.getResourceAsStream(configFilename);
+        String[] lines = new String[]{};
+        try(InputStream is = classloader.getResourceAsStream(configFilename)) {
+            assert is != null;
             reader = new BufferedReader(new InputStreamReader(is));
+            lines = reader.lines().toArray(String[]::new);
         } catch (NullPointerException ex) {
             throw new IOException(ex + ": " + "The problem with finding the file, you need to config.txt upload to the resource folder");
         }
-        return reader.lines().toArray(String[]::new);
+        return lines;
     }
-    public List<Pair<String, String[]>> getInstruction(String commandsFilename, String configFilename) throws IOException, CheckCommandException {
+    public List<Pair<String, String[]>> getInstruction(String[] args) throws IOException, CheckCommandException {
         Main.logger.info("Start the mode of receiving commands from the configuration file.\n");
-        CheckCommand cc = new CheckCommand(commandsFilename);
+        CheckCommand cc = new CheckCommand();
+        String configFilename = args[0];
 
         List<Pair<String, String[]>> instructions = new ArrayList<>();
 
@@ -36,7 +38,7 @@ public class InstructionsFromFile extends GetInstructions {
             if (cc.checkCommandFromFile(parts[0])) {
                 instructions.add(new Pair<>(parts[0].toUpperCase(Locale.ROOT), Arrays.copyOfRange(parts, 1, parts.length)));
             } else {
-                Main.logger.warning("The commands weren't successfully received from the configuration file.\n");
+                Main.logger.error("The commands weren't successfully received from the configuration file.\n");
                 throw new CheckCommandException("You entered an incorrect command " + parts[0] + " in file " + configFilename);
             }
         }
@@ -44,23 +46,3 @@ public class InstructionsFromFile extends GetInstructions {
         return instructions;
     }
 }
-//        reader.lines()
-//                .map(line -> line.split("\\s+"))
-//                .forEach(parts -> {
-//                    if (cc.checkCommandFromFile(parts[0]))
-//                        instructions.add(new Pair<>(parts[0], (Arrays.copyOfRange(parts, 1, parts.length))));
-//                    else{
-//                        throw new CheckCommandException("You enter incorrect command " + parts[0] + " in file " + filename);
-//                    }
-//                });
-//        try (BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\misai\\IdeaProjects\\StackCalculator\\StackCalculator\\src\\main\\java\\org\\fit_labs\\labs2\\calculate.txt"))) {
-//            reader.lines()
-//                    .map(line -> line.split("\\s+"))
-//                    .forEach(parts -> {
-//                            if (cc.checkCommandFromFile(parts[0]))
-//                                instructions.add(new Pair<>(parts[0], (Arrays.copyOfRange(parts, 1, parts.length))));
-//                            else{
-//                                throw new CheckCommandException("You enter incorrect command in file " + filename);
-//                            }
-//                    });
-//        } catch 

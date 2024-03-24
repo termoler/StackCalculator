@@ -8,14 +8,12 @@ import java.io.PrintStream;
 import static org.junit.jupiter.api.Assertions.*;
 
 class PrintTest {
-
-
     @org.junit.jupiter.api.Test
     void correctEquals() {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ExecutionContext context = new ExecutionContext(baos);
 
-        context.pushStackValue(4);
+        context.pushStackValue(4.0);
         try(PrintStream stream = new PrintStream(baos))
         {
             context.printValue(context.getTopStack().toString());
@@ -29,7 +27,7 @@ class PrintTest {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ExecutionContext context = new ExecutionContext(baos);
 
-        context.pushStackValue(4);
+        context.pushStackValue(4.0);
         try(PrintStream stream = new PrintStream(baos))
         {
             context.printValue(context.getTopStack().toString());

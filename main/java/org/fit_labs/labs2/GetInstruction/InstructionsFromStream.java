@@ -5,12 +5,11 @@ import org.fit_labs.labs2.Main;
 import org.fit_labs.labs2.Toolkit.Pair;
 import java.io.IOException;
 import java.util.*;
-import java.util.logging.Logger;
 
-public class InstructionsFromStream extends GetInstructions {
-    public List<Pair<String, String[]>> getInstruction(String commandsFilename) throws IOException {
+public class InstructionsFromStream {
+    public List<Pair<String, String[]>> getInstruction(String[] args) throws IOException {
         Main.logger.info("Starting the mode of receiving commands from the stream.\n");
-        CheckCommand cc = new CheckCommand(commandsFilename);
+        CheckCommand cc = new CheckCommand();
         List<Pair<String, String[]>> instructions = new ArrayList<>();
         Scanner in = new Scanner(System.in);
         String line;

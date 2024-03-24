@@ -9,15 +9,15 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class InstructionsFromFileTest {
+class InstructionsFromFileTxtTest {
     InstructionsFromFile iff = new InstructionsFromFile();
     @Test
     void getInstruction() {
         Assertions.assertThrows(IOException.class, () -> {
-            iff.getInstruction("dsfds", "sdfs");
+            iff.getInstruction(new String[]{"sdfs"});
         });
         Assertions.assertThrows(CheckCommandException.class, () -> {
-            iff.getInstruction("commandsFactory.txt", "noExistCommands.txt");
+            iff.getInstruction(new String[]{"noExistCommands.txt"});
         });
 
     }
